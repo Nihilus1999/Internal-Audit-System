@@ -51,7 +51,7 @@ npm install
 
 3. Una vez creada la base de datos, debe colocar los datos correspondiente en la variable de entorno de ejemplo
 
-4. Debe cambiar el nombre de .env.example por .env.
+4. Debe cambiar el nombre de .env.example por .env.dev
 
 5. Ejecuta el siguiente scripts personalizado para correr el backend en desarrollo
 
@@ -71,7 +71,7 @@ npx sequelize-cli db:migrate
 Para insertar todos los Seeders (datos de prueba), ejecute el siguiente comando
 
 ```
-npx sequelize-cli db:seed:undo:all
+npx sequelize-cli db:seed:all
 ```
 
 

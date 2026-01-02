@@ -1,41 +1,38 @@
 import nodemailer from 'nodemailer'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,              
+    secure: false,          
     auth: {
-        user: 'consultoresjdg.auditorias@gmail.com',
-        pass: 'bxjo gzud tjfc iqsx', //Clave de Smtp de Gmail
+        user: process.env.MAIL_USER || 'auditorias.consultores.j.d.g@gmail.com',
+        pass: process.env.MAIL_PASS || 'pkso zcxa yjtq pkiu', 
     },
+    tls: {
+        rejectUnauthorized: false
+    }
 })
 
 // Función para enviar el correo
 export const sendMail = async ({ to, subject, text, html }) => {
     try {
+        console.log(`Intentando conectar a Gmail por puerto 587 para enviar a: ${to}...`)
+        
         const info = await transporter.sendMail({
-            from: '"Consultores JDG - Auditorias Internas" <consultoresjdg.auditorias@gmail.com>', // Reemplaza con tu nombre y correo
+            from: '"Consultores JDG - Auditorias Internas" <auditorias.consultores.j.d.g@gmail.com>',
             to,
             subject,
             text,
             html,
         })
+        
+        console.log('Correo enviado con éxito ID:', info.messageId)
         return info
     } catch (error) {
-        console.error('Error al enviar correo:', error)
-        throw error
+        console.error('Error FATAL al enviar correo:', error)
+        throw error // Esto es importante para que tu controlador sepa que falló
     }
 }
-
-// Función para enviar un correo de prueba
-/*export const sendTestEmail = async () => {
-    try {
-        await sendMail({
-            to: 'asdrubal.asencio1@gmail.com', // Reemplaza con un correo de prueba
-            subject: 'Prueba de Correo desde Gmail',
-            text: 'Este es un correo de prueba enviado desde Nodemailer con Gmail.',
-            html: '<h2>¡Hola!</h2><p>Este es un mensaje de prueba enviado correctamente a través de Gmail.</p>',
-        });
-        console.log('✅ Prueba de correo enviada.');
-    } catch (error) {
-        console.error('❌ Error en prueba de envío:', error);
-    }
-};*/

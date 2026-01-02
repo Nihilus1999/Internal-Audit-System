@@ -7,13 +7,10 @@ Permite gestionar programas, riesgos, hallazgos y reportes de forma digital, gar
 
 ## 🌐 Enlace de acceso a produccion con la plataforma de Azure
 
-👉 [Acceder al Frontend de producción](https://zealous-smoke-004e8600f.6.azurestaticapps.net/)
-
 Utilicen el siguiente usuario para hacer login en la aplicación:
 
-Usuario: ideprueba17.
-
-Contraseña: PruebaUser123*.
+Usuario: ideprueba17
+Contraseña: Tesis2025*
 
 ---
 
