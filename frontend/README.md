@@ -21,8 +21,7 @@ Cuenta con módulos especializados para la **gestión de riesgos, programas, mat
 
 ---
 ## ⚙️ Variables de entorno
-
-Crea un archivo `.env` a partir de `.env.example`:
+Cambia el nombre del archivo `.env.example` al nombre `.env`:
 
 ---
 
