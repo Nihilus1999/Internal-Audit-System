@@ -1,4 +1,4 @@
-# Sistema de Gestión de Auditorías Internas (SGAI)
+# Sistema de Gestión de Auditorías Internas
 
 > **Trabajo Instrumental de Grado** > **Institución:** Universidad Católica Andrés Bello (UCAB)  
 > **Cliente:** Consultores J.D.G. S.A.
