@@ -32,7 +32,7 @@ function PermissionsModal({ open, onClose, title, items }) {
         </Box>
       </DialogTitle>
 
-      <DialogContent dividers>
+      <DialogContent >
         <Typography variant="h6" fontWeight="bold" textAlign="center" mb={2}>
           {title}
         </Typography>
