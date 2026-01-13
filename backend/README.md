@@ -48,7 +48,6 @@ npm install
 
 2. Debe crear una base de datos con el nombre de su preferencia
 
-
 3. Una vez creada la base de datos, debe colocar los datos correspondiente en la variable de entorno de ejemplo
 
 4. Debe cambiar el nombre de .env.example por .env.dev
